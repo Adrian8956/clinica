@@ -37,3 +37,16 @@ frm.btnUrgencia.addEventListener("click", () =>{
     frm.inPaciente.value = "";
     frm.inPaciente.focus();
 });
+
+frm.btnAtender.addEventListener("click", ()=>{
+  if(pacientes === 0){
+    alert("Não há pacientes na lista de espera");
+    frm.inPaciente.focus();
+    return;
+  }
+  const atender = pacientes.shift(); 
+  respNome.innerText = atender;
+  let lista = "";
+  pacientes.forEach((paciente, i) => (lista += `${i + 1}. ${paciente}\n`));
+  respLista.innerText = lista
+});
