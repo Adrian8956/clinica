@@ -39,7 +39,7 @@ frm.btnUrgencia.addEventListener("click", () =>{
 });
 
 frm.btnAtender.addEventListener("click", ()=>{
-  if(pacientes === 0){
+  if(pacientes == 0){
     alert("Não há pacientes na lista de espera");
     frm.inPaciente.focus();
     return;
